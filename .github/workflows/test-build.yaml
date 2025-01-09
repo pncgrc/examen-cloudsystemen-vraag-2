@@ -12,9 +12,10 @@ jobs:
 
       - name: Install ESLint
         run: npm install
-        
+
   eslint:
     name: Run eslint scanning
+    needs: install-dependencies
     runs-on: ubuntu-latest
     permissions:
       contents: read
